@@ -16,7 +16,7 @@ export default class App extends React.PureComponent {
             <Menu/>
             <Router>
                 <Home path="/"/>
-                <Images path="/images"/>
+                <Images path="/images" animal="dog"/>
             </Router>
             <Footer/>
         </React.Fragment>;
