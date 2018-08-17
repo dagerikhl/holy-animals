@@ -1,8 +1,25 @@
-.message {
-    padding: 1em 2em;
+.img-circle-cropper {
+    height: 100px;
 
-    color: #ffffff;
-    background-color: #ff0000;
-    border: 1px solid #000000;
-    box-shadow: 1px 1px 3px #000000;
+    overflow: hidden;
+
+    border-radius: 50%;
+}
+
+.img-circle-cropper > img {
+    display: inline;
+
+    height: 100%;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+.nav-link {
+    margin: 1em 1em;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
 }

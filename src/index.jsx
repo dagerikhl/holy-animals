@@ -1,21 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import 'css/reset.css';
 import 'css/layout.css';
 import 'css/style.css';
 
-class App extends React.Component {
-
-    render() {
-        return <React.Fragment>
-            <h1>Welcome friend!</h1>
-            <div className="message">
-                Stay a while, and listen.
-            </div>
-        </React.Fragment>;
-    }
-
-}
+import App from 'src/App';
 
 const target = document.querySelector('#app');
 
