@@ -1,2 +1,8 @@
+# Editors
 .idea
+
+# Dependecies
 node_modules
+
+# Generated files
+dist
