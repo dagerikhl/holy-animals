@@ -17,11 +17,21 @@ module.exports = {
             {
                 test: /\.jsx?/,
                 use: [
-                    {
-                        loader: 'babel-loader'
-                    }
+                    { loader: 'babel-loader' }
+                ]
+            },
+            {
+                test: /\.css$/,
+                use: [
+                    { loader: 'style-loader' },
+                    { loader: 'css-loader' }
                 ]
             }
         ]
+    },
+    resolve: {
+        alias: {
+            css: path.resolve(__dirname, 'css')
+        }
     }
 };

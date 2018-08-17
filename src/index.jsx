@@ -1,12 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import 'css/layout.css';
+import 'css/style.css';
+
 class App extends React.Component {
 
     render() {
         return <React.Fragment>
-            <h1>Hello world!</h1>
-            <h1>Goodbye world.</h1>
+            <h1>Welcome friend!</h1>
+            <div className="message">
+                Stay a while, and listen.
+            </div>
         </React.Fragment>;
     }
 
