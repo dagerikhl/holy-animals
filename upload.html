@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Awesome Holy Dogs</title>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="My web page for the web course at Acando">
+    <meta name="keywords" content="course,web,html,css">
+    <meta name="author" content="Dag Erik Homdrum Løvgren">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="layout.css">
+
+    <script>
+        document.write('<script src="http://' +
+            (location.host || 'localhost').split(':')[0] +
+            ':35729/livereload.js?snipver=1"></' +
+            'script>');
+    </script>
+</head>
+
+<body>
+<div class="page-container">
+    <header>
+        <div class="img-circle-cropper">
+            <img src="dog.jpg" alt="The Holy Dogs" title="The Holy Dogs"/>
+        </div>
+        <h1>Awesome Holy Dogs</h1>
+        <div class="img-circle-cropper">
+            <img src="me.png" alt="Me" title="Me"/>
+        </div>
+    </header>
+
+    <nav>
+        <h2>Menu</h2>
+        <div class="nav-link"><a href="index.html">> Content</a></div>
+        <div class="nav-link"><a href="upload.html">> Upload picture</a></div>
+    </nav>
+
+    <div class="content-container">
+        <h2>Upload your own Holy Dog</h2>
+        <form class="card img-form" action="uploaded.html" method="post">
+            <div>
+                <label for="picture">New Holy Dog Picture:</label>
+                <input type="file" accept="image/*" id="picture" name="picture">
+            </div>
+            <div>
+                <button type="submit">Upload your Holy Dog</button>
+            </div>
+        </form>
+    </div>
+
+    <footer>
+        <h3>&#0169; 2018 - Dag Erik Homdrum Løvgren</h3>
+        <h3>Acando but not Acando AS</h3>
+    </footer>
+</div>
+</body>
+
+</html>
