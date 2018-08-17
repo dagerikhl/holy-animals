@@ -1,46 +1,38 @@
 import React from 'react';
 
-import { Link } from '@reach/router/index';
+import { fetchImages, generateImage } from 'src/utils';
 
 const baseUrl = 'https://acandodogapi.azurewebsites.net/';
 
 export default class Images extends React.Component {
 
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
 
         this.state = {
+            animal: props.animal,
             images: []
         };
     }
 
     componentDidMount() {
-        this.fetchImages()
+        fetchImages(this.state.animal)
             .then((data) => data.json())
-            .then((json) => {
+            .then((images) => {
                 this.setState({
-                    images: json
+                    images
                 });
             });
     }
 
     render() {
-        return <section className="flex-container">
-            {this.state.images.map(Images.generateImage)}
-        </section>;
-    }
+        return <React.Fragment>
+            <h2>These are all the awesome Holy Animals you will ever need</h2>
 
-    fetchImages() {
-        return fetch(baseUrl + this.props.animal + 's.json');
-    }
-
-    static generateImage(image) {
-        return <Link to={`/image/${image.id}`} key={image.id}
-                     className="card clickable-card content-img-container">
-            <h3>#{image.id}</h3>
-            <img src={`${baseUrl}${image.imageUrl}`}/>
-            <div>&hearts; {image.numberOfLikes}</div>
-        </Link>;
+            <div className="flex-container">
+                {this.state.images.map((image) => generateImage(image, true))}
+            </div>
+        </React.Fragment>;
     }
 
 }
