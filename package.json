@@ -2,7 +2,7 @@
     "name": "holy-animals",
     "version": "1.0.0",
     "description": "Holy dogs and cats for the masses. Deus in creatura.",
-    "main": "index.html",
+    "main": "index.js",
     "scripts": {},
     "repository": {
         "type": "git",
