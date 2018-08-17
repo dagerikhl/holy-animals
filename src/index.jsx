@@ -13,4 +13,4 @@ class App extends React.Component {
 
 const target = document.querySelector('#app');
 
-ReactDOM.render(App, target);
+ReactDOM.render(<App/>, target);
