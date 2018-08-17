@@ -3,7 +3,9 @@
     "version": "1.0.0",
     "description": "Holy dogs and cats for the masses. Deus in creatura.",
     "main": "index.js",
-    "scripts": {},
+    "scripts": {
+        "start": "webpack"
+    },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/dagerikhl/holy-animals.git"
